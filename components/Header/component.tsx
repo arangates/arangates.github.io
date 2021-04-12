@@ -22,7 +22,7 @@ enum Themes {
 
 enum Languages {
   en = "en",
-  ru = "ru",
+  ru = "ta",
 }
 
 export const Header: FC = () => {
@@ -107,7 +107,7 @@ export const Header: FC = () => {
               onChange={toggleLanguage}
             >
               <option value={Languages.en}>EN</option>
-              <option value={Languages.ru}>RU</option>
+              <option value={Languages.ta}>TA</option>
             </select>
             <span className="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center pointer-events-none">
               <svg

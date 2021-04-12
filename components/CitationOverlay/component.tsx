@@ -56,7 +56,7 @@ export const CitationOverlay: FC<Props> = ({ citation }: Props) => {
           animate="visible"
           transition={{
             delay: 1.0,
-            duration: 1.2,
+            duration: 0.2,
           }}
         >
           {t("citation.content")}
