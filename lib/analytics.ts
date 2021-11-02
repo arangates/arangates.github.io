@@ -1,19 +1,14 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import * as Fathom from 'fathom-client';
+import { usePlausible } from 'next-plausible';
 
 export const useAnalytics = () => {
   const router = useRouter();
+  const plausible = usePlausible();
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
-        includedDomains: ['aranganathan.vercel.app']
-      });
-    }
-
     function onRouteChangeComplete() {
-      Fathom.trackPageview();
+      plausible('customEventName')
     }
 
     router.events.on('routeChangeComplete', onRouteChangeComplete);

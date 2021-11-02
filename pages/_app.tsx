@@ -12,6 +12,7 @@ import {
   KBarSearch,
   KBarResults
 } from "kbar";
+import PlausibleProvider from 'next-plausible'
 
 export default function App({ Component, pageProps }: AppProps) {
   useAnalytics();
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
   ];
 
   return (
+    <PlausibleProvider domain="aranganathan.vercel.app">
     <KBarProvider actions={actions}>
       <KBarPortal>
         <KBarPositioner>
@@ -48,5 +50,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </ThemeProvider>
       </SessionProvider>
     </KBarProvider>
+    </PlausibleProvider>
   );
 }

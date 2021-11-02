@@ -4299,6 +4299,11 @@ next-contentlayer@^0.0.27:
     "@contentlayer/utils" "0.0.27"
     rxjs "^7.1.0"
 
+next-plausible@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.0.1.tgz#4aff886f438b79c2f7767f204e0ca1fd4ebdc387"
+  integrity sha512-DA7MgmLf68HWkUdncQwok/auALuZR6G2OkgDydy0ADncRIjmX5nv+E3ia8C3LJ5jLvoNRwX5eUeuna0Ao+exuQ==
+
 next-themes@0.0.15:
   version "0.0.15"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.0.15.tgz#ab0cee69cd763b77d41211f631e108beab39bf7d"
