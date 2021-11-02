@@ -23,30 +23,17 @@ export default function Footer() {
           <Link href="/">
             <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
           </Link>
-          <Link href="/about">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              About
-            </a>
-          </Link>
-          <Link href="/newsletter">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              Newsletter
-            </a>
-          </Link>
+          <ExternalLink href="https://github.com/arangates">GitHub</ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://twitter.com/arangates">
             Twitter
           </ExternalLink>
-          <ExternalLink href="https://github.com/arangates">GitHub</ExternalLink>
           <ExternalLink href="https://www.linkedin.com/in/arangates/">
             LinkedIn
           </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
-          <Link href="/uses">
-            <a className="text-gray-500 hover:text-gray-600 transition">Uses</a>
-          </Link>
           <Link href="/snippets">
             <a className="text-gray-500 hover:text-gray-600 transition">
               Snippets
