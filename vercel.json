@@ -23,11 +23,7 @@
     },
     {
       "source": "/30",
-      "destination": "https://calendly.com/lee-vercel/30min"
-    },
-    {
-      "source": "/15",
-      "destination": "https://calendly.com/lee-vercel/15min"
+      "destination": "https://calendly.com/aranganathan/30min"
     }
   ]
 }

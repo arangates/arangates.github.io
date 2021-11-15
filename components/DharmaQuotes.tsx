@@ -4,7 +4,7 @@ import useSWR from 'swr';
 import fetcher from 'lib/fetcher';
 import { Views } from 'lib/types';
 
-export default function DharmaQuotes({ slug }) {
+export default function ViewCounter({ slug }) {
   const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
   const views = new Number(data?.total);
 
