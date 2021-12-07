@@ -17,9 +17,9 @@ export default function Dashboard() {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             This is my personal dashboard, built with Next.js API routes
             deployed as serverless functions. I use this dashboard to track
-            various metrics across platforms like Unsplash, YouTube, GitHub, and
+            various metrics across platforms like Spotify, GitHub, and
             more. Want to build your own? Check out my&nbsp;
-            <Link href="/blog/fetching-data-with-swr">
+            <Link href="/blog/how-i-built-my-website-with-nextjs">
               <a className="text-gray-900 dark:text-gray-100 underline">
                 blog series.
               </a>
