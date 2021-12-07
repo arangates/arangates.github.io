@@ -5,14 +5,14 @@ import { allBlogs } from '.contentlayer/data';
 async function generate() {
   const feed = new RSS({
     title: 'Aranganathan Rathinavelu',
-    site_url: 'https://aranganathan.vercel.app',
-    feed_url: 'https://aranganathan.vercel.app/feed.xml'
+    site_url: 'https://aranga.in',
+    feed_url: 'https://aranga.in/feed.xml'
   });
 
   allBlogs.map((post) => {
     feed.item({
       title: post.title,
-      url: `https://aranganathan.vercel.app/blog/${post.slug}`,
+      url: `https://aranga.in/blog/${post.slug}`,
       date: post.publishedAt,
       description: post.summary
     });

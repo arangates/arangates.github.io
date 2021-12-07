@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://aranganathan.vercel.app/sitemap.xml
+Sitemap: https://aranga.in/sitemap.xml

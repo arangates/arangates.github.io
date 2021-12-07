@@ -27,7 +27,7 @@ async function generate() {
 
             return `
               <url>
-                  <loc>${`https://aranganathan.vercel.app${route}`}</loc>
+                  <loc>${`https://aranga.in${route}`}</loc>
               </url>
             `;
           })

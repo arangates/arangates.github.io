@@ -38,9 +38,9 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Aranganathan Rathinavelu – Developer, writer, creator.',
-    description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-    image: 'https://aranganathan.vercel.app/static/images/banner.png',
+    title: 'Aranganathan Rathinavelu – Front-end developer',
+    description: `Front-end developer, JavaScript enthusiast.`,
+    image: 'https://aranga.in/static/images/banner.png',
     type: 'website',
     ...customMeta
   };
@@ -51,8 +51,8 @@ export default function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://aranganathan.vercel.app${router.asPath}`} />
-        <link rel="canonical" href={`https://aranganathan.vercel.app${router.asPath}`} />
+        <meta property="og:url" content={`https://aranga.in${router.asPath}`} />
+        <link rel="canonical" href={`https://aranga.in${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Aranganathan Rathinavelu" />
         <meta property="og:description" content={meta.description} />

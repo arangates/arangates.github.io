@@ -10,7 +10,7 @@ const editUrl = (slug) =>
   `https://github.com/arangates/aranganathan.vercel.app/edit/main/data/blog/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://aranganathan.vercel.app/blog/${slug}`
+    `https://aranga.in/blog/${slug}`
   )}`;
 
 export default function BlogLayout({
@@ -21,7 +21,7 @@ export default function BlogLayout({
     <Container
       title={`${post.title} – Aranganathan Rathinavelu`}
       description={post.summary}
-      image={`https://aranganathan.vercel.app${post.image}`}
+      image={`https://aranga.in${post.image}`}
       date={new Date(post.publishedAt).toISOString()}
       type="article"
     >
