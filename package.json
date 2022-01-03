@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@prisma/client": "^3.3.0",
     "@tailwindcss/typography": "0.4.1",
     "big.js": "6.1.1",
