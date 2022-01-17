@@ -35,11 +35,11 @@ export default function Document(props) {
           rel="mask-icon"
         />
         <meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png" />
+        <meta name="yandex-verification" content="be9f1b94e58ce511" />
         <meta
           content="/static/images/browserconfig.xml"
           name="msapplication-config"
         />
-        <meta name="yandex-verification" content="dd3e8ab7d29318a9" />
         <meta name="google-site-verification" content="6GA0zZnk-lp9g9jAePyZvjrV_6yx1EfbzqS2HmzEsjw" />
       </Head>
       <body className="bg-white dark:bg-black text-white dark:text-black">
