@@ -4,19 +4,19 @@ import Container from 'components/Container';
 import QuotesPost from 'components/QuotesPost';
 import { InferGetStaticPropsType } from 'next';
 import { pick } from 'lib/utils';
-import { allBlogs } from '.contentlayer/data';
+import { allQuotes } from '.contentlayer/data';
 
 export default function Quotes({
-  posts
+  quotes
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [searchValue, setSearchValue] = useState('');
-  const filteredBlogPosts = posts
+  const filteredBlogQuotes = quotes
     .sort(
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
     )
     .filter((post) =>
-      post.title.toLowerCase().includes(searchValue.toLowerCase())
+      post.quote.toLowerCase().includes(searchValue.toLowerCase())
     );
 
   return (
@@ -54,16 +54,14 @@ export default function Quotes({
             />
           </svg>
         </div>
-        <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
-          All Quotes
-        </h3>
-        {!filteredBlogPosts.length && (
+
+        {!filteredBlogQuotes.length && (
           <p className="mb-4 text-gray-600 dark:text-gray-400">
             No quotes found.
           </p>
         )}
-        {filteredBlogPosts.map((post) => (
-          <QuotesPost key={post.title} {...post} />
+        {filteredBlogQuotes.map((post) => (
+          <QuotesPost key={post.slug} {...post} />
         ))}
       </div>
     </Container>
@@ -71,9 +69,9 @@ export default function Quotes({
 }
 
 export function getStaticProps() {
-  const posts = allBlogs.map((post) =>
-    pick(post, ['slug', 'title', 'summary', 'publishedAt'])
+  const quotes = allQuotes.map((post) =>
+    pick(post, ['slug', 'publishedAt', 'author', 'quote'])
   );
 
-  return { props: { posts } };
+  return { props: { quotes } };
 }

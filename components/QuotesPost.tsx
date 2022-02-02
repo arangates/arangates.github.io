@@ -1,10 +1,4 @@
-import Link from 'next/link';
-import useSWR from 'swr';
-
-import fetcher from 'lib/fetcher';
-import { Views } from 'lib/types';
-import type { Blog } from '.contentlayer/types';
-import React from 'react';
+import type { Quote } from '.contentlayer/types';
 
 const QuoteIcon = () => {
   return (
@@ -19,23 +13,19 @@ const QuoteIcon = () => {
   );
 };
 export default function QuotesPost({
-  title,
-  summary,
+  quote,
+  author,
   slug
-}: Pick<Blog, 'title' | 'summary' | 'slug'>) {
-  const { data } = useSWR<Views>(`/api/quotes/${slug}`, fetcher);
-  const views = data?.total;
-
+}: Pick<Quote, 'quote' | 'author' | 'slug'>) {
   return (
     <blockquote className="pl-12 mt-10">
       <div className="relative">
         <QuoteIcon />
-        <div className="text-gray-700 dark:text-gray-200">{summary}</div>
+        <div className="text-gray-700 dark:text-gray-200">{quote}</div>
       </div>
 
       <footer className="mt-2 italic font-bold text-gray-500 dark:text-gray-500">
-        {"Sanatana dharma"}{" "}
-        <span className="font-normal">&middot; {title}</span>
+        <span className="font-normal">- {author}</span>
       </footer>
     </blockquote>
   );
