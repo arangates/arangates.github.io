@@ -1,5 +1,7 @@
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Farangates%2Faranganathan.vercel.app)
 
+[![Compile PDFs](https://github.com/arangates/arangates.github.io/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/arangates/arangates.github.io/actions/workflows/main.yml)
+
 # aranganathan.vercel.app
 
 - **Framework**: [Next.js](https://nextjs.org/)
