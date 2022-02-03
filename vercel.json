@@ -18,6 +18,10 @@
       "destination": "/resume.pdf"
     },
     {
+      "source": "/cover",
+      "destination": "/coverletter.pdf"
+    },
+    {
       "source": "/projects",
       "destination": "/about"
     },
