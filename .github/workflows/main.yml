@@ -17,5 +17,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: artifacts
-          path: artifacts/*.pdf
+          name: public
+          path: public/*.pdf
