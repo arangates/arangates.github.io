@@ -5,6 +5,16 @@ const data = [
     text: "I had the privilege of working closely with Aranga while rolling out a very complex program over the course of eight months. Aranga was instrumental to the program's successful roll out and continued operations. he was always eager to help wherever he could and provided excellent documentation to the rest of the team, ensuring everyone knew exactly what to do. At our weekly planning meetings he would often raise points that the rest of the team had not considered while also providing solutions to the questions of other team members. I have enjoyed working with him immensely, and would jump at the opportunity to do so again in the future.",
   },
   {
+    name: "Stef Wijnberg",
+    title: "CTO, Boloo",
+    text: "I've worked with Arang for a couple of months. He is one of the nicest guys I've worked with! He's really skilled at his craft and focussed on the task at hand. I will miss him a lot."
+  },
+  {
+    name: "Jimmy van den Aker",
+    title: "CEO, Boloo",
+    text: "It gives me great pleasure to recommend Aranganathan for everyone who is reading this recommendation. I have known Aranganathan for 3+ years in my capacity as both co-employee, manager and CEO. Aranganathan has grown with me in our journey at Boloo, we’ve been through many challenges and Aranganathan was always able to adapt and continue.During my time working together with Aranganathan he has consistently demonstrated excellent communication and organisational skills while working on both front and backend engineering tasks. Aranganathan’s International way of thinking and broad general knowledge and interest in innovation in developing has brought him far in his journey.Aranganathan is a great person to work with and is able to process and execute assignments all by himself. Aranganathan was often let completely free to execute his tasks and we thoroughly enjoyed the way he approached and solved the different challenges.Aranganathan is a polite, well mannered and hard working employee who has shown great communication skills throughout his time at Boloo."
+  },
+  {
     name: "Shrihari subramanyam",
     title: "Fullstack Engineer, Anulom",
     text: "Aranga is a talented Web Developer with a keen eye for detail, but also a compassionate and effective leader, capable of managing difficult situations with incredible ease. This combination of skills - technical and human - made him perfect at him job helping aspiring junior programmers break into software development. The months I spent working with Aranga creating new projects where some of the most amazing times of my working life. Aranga is everywhere at once, knows how to make the most of limited resources and gets the job done. But it's the finesse in him technical work what makes me particularly envious! I hope I'm lucky enough to work with Aranga again in the future.",
