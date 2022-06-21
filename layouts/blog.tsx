@@ -6,12 +6,6 @@ import ViewCounter from 'components/ViewCounter';
 import type { PropsWithChildren } from 'react';
 import type { Blog } from '.contentlayer/types';
 
-const editUrl = (slug) =>
-  `https://github.com/arangates/aranganathan.vercel.app/edit/main/data/blog/${slug}.mdx`;
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://aranga.in/blog/${slug}`
-  )}`;
 
 export default function BlogLayout({
   children,
@@ -51,24 +45,6 @@ export default function BlogLayout({
         </div>
         <div className="w-full mt-4 prose dark:prose-dark max-w-none">
           {children}
-        </div>
-
-        <div className="text-sm text-gray-700 dark:text-gray-300">
-          <a
-            href={discussUrl(post.slug)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {'Discuss on Twitter'}
-          </a>
-          {` • `}
-          <a
-            href={editUrl(post.slug)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {'Edit on GitHub'}
-          </a>
         </div>
       </article>
     </Container>
