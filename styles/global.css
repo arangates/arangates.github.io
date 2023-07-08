@@ -21,7 +21,7 @@ html {
 }
 
 #__next {
-  @apply bg-gray-50 dark:bg-gray-900;
+  @apply bg-white dark:bg-gray-900;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -83,7 +83,7 @@ html {
 }
 
 .prose pre {
-  @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+  @apply border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900;
 }
 
 .prose code {
