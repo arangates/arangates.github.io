@@ -82,13 +82,13 @@ export const About = () => {
                   </RainbowHighlight>{' '}
                   in{' '}
                   <a
-                    href="http://boloo.co/"
+                    href="https://www.asml.com/en"
                     className={cx(
                       'font-bold transition-colors hover:text-cyan-500',
                       FOCUS_VISIBLE_OUTLINE
                     )}
                   >
-                    WR1 ❤️
+                    ASML❤️
                   </a>{' '}
                 </span>
               </div>
@@ -113,7 +113,7 @@ export const About = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="ml-3">'s-Hertogenbosch</span>
+                <span className="ml-3">Veldhoven</span>
               </div>
 
               <div className="flex items-center mt-4">
@@ -137,38 +137,6 @@ export const About = () => {
                   delightful.
                 </span>
               </div>
-
-              <p className="mt-2">
-                Excited to learn about shipping{' '}
-                <RainbowHighlight color={colors[2]}>
-                  great products
-                </RainbowHighlight>
-                , becoming a{' '}
-                <RainbowHighlight color={colors[3]}>
-                  better developer
-                </RainbowHighlight>{' '}
-                and growing a{' '}
-                <RainbowHighlight color={colors[0]}>
-                  career in tech
-                </RainbowHighlight>
-                .
-              </p>
-
-              <p className="mt-2">
-                More Info {' '}
-                <a
-                  href={TWITTER_LINK}
-                  className={cx(
-                    'font-bold transition-colors hover:text-cyan-500',
-                    FOCUS_VISIBLE_OUTLINE
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  aranga.in
-                </a>
-                .
-              </p>
             </div>
           </RoughNotationGroup>
         </div>
