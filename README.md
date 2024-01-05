@@ -29,3 +29,6 @@ $ yarn dev
 ```
 
 Create a `.env` file similar to [`.env.example`](https://github.com/arangates/aranganathan.vercel.app/blob/main/.env.example).
+
+
+![Alt](https://repobeats.axiom.co/api/embed/d3d846bef77e5453e0b52c99eb57bf85c456bb3f.svg "Repobeats analytics image")
