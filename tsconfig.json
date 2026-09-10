@@ -1,0 +1,3 @@
+{
+  "extends": "@aranga.dev/config/tsconfig.base.json"
+}

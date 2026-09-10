@@ -1,0 +1,24 @@
+{
+  "name": "@aranga.dev/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@aranga.dev/db": "workspace:*",
+    "@aranga.dev/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@aranga.dev/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

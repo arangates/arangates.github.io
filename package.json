@@ -1,0 +1,35 @@
+{
+  "name": "aranga.dev",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev:web": "turbo run dev -F web --",
+    "db:push": "turbo run db:push -F @aranga.dev/db --",
+    "db:studio": "turbo run db:studio -F @aranga.dev/db --",
+    "db:generate": "turbo run db:generate -F @aranga.dev/db --",
+    "db:migrate": "turbo run db:migrate -F @aranga.dev/db --",
+    "db:local": "turbo run db:local -F @aranga.dev/db --",
+    "check": "oxlint && oxfmt --write"
+  },
+  "dependencies": {
+    "@aranga.dev/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@aranga.dev/config": "workspace:*",
+    "@types/node": "catalog:",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "turbo": "^2.10.12",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@11.17.0"
+}
