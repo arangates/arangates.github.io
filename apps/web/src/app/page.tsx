@@ -1,47 +1,80 @@
-"use client";
-import { useQuery } from "@tanstack/react-query";
-
-import { trpc } from "@/utils/trpc";
-
-const TITLE_TEXT = `
- ██████╗ ███████╗████████╗████████╗███████╗██████╗
- ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
- ██████╔╝█████╗     ██║      ██║   █████╗  ██████╔╝
- ██╔══██╗██╔══╝     ██║      ██║   ██╔══╝  ██╔══██╗
- ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║
- ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
-
- ████████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
- ╚══██╔══╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
-    ██║       ███████╗   ██║   ███████║██║     █████╔╝
-    ██║       ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
-    ██║       ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
-    ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
- `;
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight, ArrowUpRight } from "lucide-react";
+import { ProfileStory, ProjectStories, WritingStories } from "@/components/portfolio-stories";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Home() {
-  const healthCheck = useQuery(trpc.healthCheck.queryOptions());
-
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-2">
-      <pre className="overflow-x-auto font-mono text-sm">{TITLE_TEXT}</pre>
-      <div className="grid gap-6">
-        <section className="rounded-lg border p-4">
-          <h2 className="mb-2 font-medium">API Status</h2>
-          <div className="flex items-center gap-2">
-            <div
-              className={`h-2 w-2 rounded-full ${healthCheck.data ? "bg-green-500" : "bg-red-500"}`}
-            />
-            <span className="text-sm text-muted-foreground">
-              {healthCheck.isLoading
-                ? "Checking..."
-                : healthCheck.data
-                  ? "Connected"
-                  : "Disconnected"}
-            </span>
-          </div>
-        </section>
-      </div>
-    </div>
+    <main id="main-content" className="news-feed">
+      <header className="feed-header">
+        <div>
+          <h1>Aranga</h1>
+          <p>Engineer. Builder. Always curious.</p>
+        </div>
+        <div className="feed-header-right">
+          <ModeToggle />
+          <Image src="/aranga.jpg" alt="" width={43} height={43} />
+        </div>
+      </header>
+      <a
+        className="announcement"
+        href="https://www.linkedin.com/in/arangates/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span className="announcement-icon">a</span>
+        <span>
+          <strong>Building thoughtful experiences at ASML</strong>
+          <span>
+            Software engineer · Netherlands <ChevronRight size={14} />
+          </span>
+        </span>
+        <ArrowUpRight className="announcement-arrow" size={24} />
+      </a>
+      <section className="feed-section">
+        <h2 className="section-title">Top Stories</h2>
+        <ProfileStory />
+      </section>
+      <section className="feed-section" id="projects">
+        <div className="section-heading">
+          <h2 className="section-title">Made by Aranga</h2>
+          <Link href="/projects">
+            See all <ChevronRight size={16} />
+          </Link>
+        </div>
+        <ProjectStories />
+      </section>
+      <section className="feed-section" id="writing">
+        <div className="section-heading">
+          <h2 className="section-title">From the Workbench</h2>
+          <Link href="/blog">
+            See all <ChevronRight size={16} />
+          </Link>
+        </div>
+        <WritingStories />
+      </section>
+      <a
+        className="connect-card"
+        href="https://www.linkedin.com/in/arangates/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>
+          <span className="publisher">LET’S CONNECT</span>
+          <strong>
+            Good things start with
+            <br />a conversation.
+          </strong>
+          <span>Say hello on LinkedIn</span>
+        </span>
+        <ArrowUpRight size={30} />
+      </a>
+      <footer className="feed-footer">
+        © {new Date().getFullYear()} Aranganathan Rathinavelu
+        <br />
+        <span>Built with curiosity. Made for the web.</span>
+      </footer>
+    </main>
   );
 }

@@ -1,3 +1,1 @@
-{
-  "extends": "@aranga.dev/config/tsconfig.base.json"
-}
+{"extends":"./apps/web/tsconfig.json","include":["apps/web/src/**/*.ts","apps/web/src/**/*.tsx"]}

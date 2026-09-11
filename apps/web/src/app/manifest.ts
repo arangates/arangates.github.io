@@ -1,25 +1,15 @@
 import type { MetadataRoute } from "next";
-
+export const dynamic = "force-static";
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "aranga.dev",
-    short_name: "aranga.dev",
-    description: "my pwa app",
-    start_url: "/new",
+    name: "Aranga — Software Engineer & Builder",
+    short_name: "Aranga",
+    description: "Projects, writing, skills, and work by Aranganathan Rathinavelu.",
+    start_url: "/",
+    scope: "/",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#000000",
-    icons: [
-      {
-        src: "/favicon/web-app-manifest-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/favicon/web-app-manifest-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
+    theme_color: "#ffffff",
+    icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
   };
 }
