@@ -14,7 +14,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { Github } from "./social-icons";
-import { ModeToggle } from "./mode-toggle";
 
 const navigation = [
   { href: "/", label: "Home", icon: House },
@@ -104,10 +103,6 @@ export default function Header() {
             <span>Find me on GitHub</span>
             <ArrowUpRight size={14} />
           </a>
-          <div className="rail-theme">
-            <ModeToggle />
-            <span>Appearance</span>
-          </div>
           <div className="rail-footer">
             Aranganathan Rathinavelu
             <br />

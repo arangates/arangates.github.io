@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { posts } from "@/content/portfolio";
 
@@ -81,7 +82,7 @@ export function ProjectStories() {
 }
 export function ProfileStory() {
   return (
-    <a className="story-card profile-story" href="/about">
+    <Link className="story-card profile-story" href="/about">
       <div className="profile-cover">
         <div>
           <span className="art-kicker">ENGINEER. BUILDER. CURIOUS HUMAN.</span>
@@ -98,15 +99,15 @@ export function ProfileStory() {
         <span className="publisher red-publisher">MEET THE DEVELOPER</span>
         <h2>Making complex things feel simple.</h2>
         <p>
-          I’m Aranganathan Rathinavelu, a software engineer at ASML. I build thoughtful digital
-          experiences and care about the details that make software a joy to use.
+          I build full-stack applications with React and Python. At ASML, I turn complex
+          semiconductor data into clear, useful interfaces.
         </p>
         <div className="story-meta">
-          <span>My story · Engineering & curiosity</span>
+          <span>About me · Building for the web since 2016</span>
           <ArrowUpRight size={17} />
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 export function WritingStories() {

@@ -1,18 +1,19 @@
+import { PageFooter } from "@/components/page-footer";
+import { PageHeader } from "@/components/page-header";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ProfileNavigation } from "@/components/profile-navigation";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Meet Aranganathan Rathinavelu, a full-stack software engineer at ASML in the Netherlands, building for the web since 2016.",
+};
 export default function About() {
   return (
     <main className="news-feed" id="main-content">
-      <header className="feed-header">
-        <div>
-          <h1>About</h1>
-          <p>The person behind the projects.</p>
-        </div>
-      </header>
+      <PageHeader title="About" description="The person behind the projects." />
       <ProfileNavigation />
       <section className="about-article">
         <Image src="/aranga.jpg" alt="Aranganathan Rathinavelu" width={160} height={180} priority />
@@ -27,8 +28,8 @@ export default function About() {
           problems into useful, approachable tools.
         </p>
         <p>
-          My work spans software engineering, side projects, and writing about what I learn along
-          the way. From semiconductors to space exploration, curiosity keeps me building.
+          Since 2016, I’ve worked on product dashboards, design systems, and full-stack
+          applications. At ASML, I build data visualization tools for computational lithography.
         </p>
         <p>
           I care about thoughtful interfaces, simple interactions, and the little details that make
@@ -36,7 +37,7 @@ export default function About() {
         </p>
       </section>
       <section className="feed-section">
-        <h2 className="section-title">The Journey</h2>
+        <h2 className="section-title">Recent experience</h2>
         <div className="experience-card">
           <span className="asml-logo">ASML</span>
           <div>
@@ -68,6 +69,7 @@ export default function About() {
       >
         Connect on LinkedIn <ArrowUpRight size={16} />
       </a>
+      <PageFooter />
     </main>
   );
 }

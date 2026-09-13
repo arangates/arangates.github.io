@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
-    "build": "next build",
+    "build": "next build && node ../../scripts/build-pwa.mjs",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
@@ -16,12 +16,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "catalog:",
-    "@tanstack/react-query-devtools": "^5.101.4",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "babel-plugin-react-compiler": "^1.0.0",
     "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "babel-plugin-react-compiler": "^1.0.0"
+    "typescript": "catalog:"
   }
 }

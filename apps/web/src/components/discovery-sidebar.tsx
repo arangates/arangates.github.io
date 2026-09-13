@@ -51,6 +51,10 @@ export function DiscoverySidebar() {
         <div className="rail-search">
           <Search size={20} />
           <input
+            type="search"
+            onKeyDown={(event) => {
+              if (event.key === "Escape") setQuery("");
+            }}
             aria-label="Search portfolio"
             placeholder="Search Aranga’s portfolio"
             value={query}
@@ -65,10 +69,15 @@ export function DiscoverySidebar() {
         {query.trim() ? (
           <div className="rail-results">
             <p className="panel-label" aria-live="polite">
-              {results.length} results
+              {results.length} {results.length === 1 ? "result" : "results"}
             </p>
             {results.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a
+                key={item.href}
+                href={item.href}
+                target={item.href.startsWith("https:") ? "_blank" : undefined}
+                rel={item.href.startsWith("https:") ? "noreferrer" : undefined}
+              >
                 <strong>{item.title}</strong>
                 <span>{item.detail}</span>
               </a>
@@ -79,10 +88,8 @@ export function DiscoverySidebar() {
           <>
             <section className="role-panel">
               <div className="panel-heading">
-                <span>CURRENTLY</span>
-                <span className="live-pill">
-                  BUILDING <i />
-                </span>
+                <span>AT WORK</span>
+                <span className="live-pill">SINCE 2022</span>
               </div>
               <div className="role-content">
                 <span className="asml-logo">ASML</span>

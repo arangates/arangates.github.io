@@ -1,6 +1,8 @@
+import { PageFooter } from "@/components/page-footer";
+import { PageHeader } from "@/components/page-header";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ProfileNavigation } from "@/components/profile-navigation";
 import { skillGroups, certifications } from "@/content/career";
 export const metadata: Metadata = {
@@ -11,12 +13,7 @@ export const metadata: Metadata = {
 export default function SkillsPage() {
   return (
     <main className="news-feed" id="main-content">
-      <header className="feed-header">
-        <div>
-          <h1>Skills</h1>
-          <p>The tools and thinking behind the work.</p>
-        </div>
-      </header>
+      <PageHeader title="Skills" description="The tools and thinking behind the work." />
       <ProfileNavigation />
       <section className="career-intro">
         <span className="publisher red-publisher">FULL-STACK ENGINEERING</span>
@@ -57,7 +54,7 @@ export default function SkillsPage() {
         ))}
       </div>
       <section className="learning-section">
-        <h2 className="section-title">Continued Learning</h2>
+        <h2 className="section-title">Learning & recognition</h2>
         <div className="learning-card">
           <h3>Certifications & training</h3>
           <ul>
@@ -65,6 +62,14 @@ export default function SkillsPage() {
               <li key={cert}>{cert}</li>
             ))}
           </ul>
+          <a
+            className="profile-inline-link"
+            href="https://www.linkedin.com/in/arangates/details/certifications/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View credentials on LinkedIn <ArrowUpRight size={15} />
+          </a>
         </div>
         <div className="learning-card">
           <h3>Recognition</h3>
@@ -76,6 +81,7 @@ export default function SkillsPage() {
           See these skills in practice <ArrowRight size={16} />
         </Link>
       </div>
+      <PageFooter />
     </main>
   );
 }

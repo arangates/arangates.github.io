@@ -28,6 +28,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
+      - name: Test offline cache and update handling
+        run: pnpm test:pwa
       - name: Build static portfolio
         run: pnpm build
       - name: Verify exported pages and assets

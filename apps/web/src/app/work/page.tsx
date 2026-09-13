@@ -1,3 +1,5 @@
+import { PageFooter } from "@/components/page-footer";
+import { PageHeader } from "@/components/page-header";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, MapPin } from "lucide-react";
@@ -11,12 +13,10 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <main className="news-feed" id="main-content">
-      <header className="feed-header">
-        <div>
-          <h1>Work History</h1>
-          <p>The teams, challenges, and work along the way.</p>
-        </div>
-      </header>
+      <PageHeader
+        title="Work History"
+        description="The teams, challenges, and work along the way."
+      />
       <ProfileNavigation />
       <section className="career-intro">
         <span className="publisher red-publisher">BUILDING SINCE 2016</span>
@@ -96,6 +96,7 @@ export default function WorkPage() {
           LinkedIn <ArrowUpRight size={16} />
         </a>
       </div>
+      <PageFooter />
     </main>
   );
 }

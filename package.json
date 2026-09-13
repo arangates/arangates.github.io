@@ -14,14 +14,15 @@
     "format": "oxfmt --write .",
     "check": "pnpm lint && oxfmt --check .",
     "preview": "node scripts/preview.mjs",
-    "verify:export": "node scripts/verify-export.mjs"
+    "verify:export": "node scripts/verify-export.mjs",
+    "test:pwa": "node --test scripts/service-worker.test.mjs"
   },
   "devDependencies": {
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0"
   },
-  "packageManager": "pnpm@11.17.0",
   "engines": {
     "node": ">=24"
-  }
+  },
+  "packageManager": "pnpm@11.17.0"
 }

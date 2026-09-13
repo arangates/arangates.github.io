@@ -5,11 +5,13 @@ export function ProfileNavigation() {
   const pathname = usePathname().replace(/\/$/, "") || "/";
   return (
     <nav className="profile-navigation" aria-label="Profile sections">
-      {([
-        { href: "/about", label: "About" },
-        { href: "/work", label: "Work history" },
-        { href: "/skills", label: "Skills" },
-      ] as const).map((item) => (
+      {(
+        [
+          { href: "/about", label: "About" },
+          { href: "/work", label: "Work history" },
+          { href: "/skills", label: "Skills" },
+        ] as const
+      ).map((item) => (
         <Link
           key={item.href}
           href={item.href}
